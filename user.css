@@ -1,3 +1,4 @@
+/* Spicetify default CSS rules */
 :root {
   --player-bar-height: 105px;
 }
@@ -185,7 +186,8 @@ div.GlueDropTarget.personal-library > *.active {
   color: var(--spice-text);
 }
 
-/* Koushi Grid Theme */
+/* Koushi Theme */
+/* Grid lines */
 #main {
   border: 3px solid var(--spice-grid-lines);
 }
@@ -198,11 +200,7 @@ div.GlueDropTarget.personal-library > *.active {
   border-right: 3px solid var(--spice-grid-lines);
 }
 
-/* .Root__now-playing-bar {
-  border-top: 3px solid var(--spice-grid-lines);
-} */
-
-main-nowPlayingBar-nowPlayingBar {
+.main-nowPlayingBar-container {
   border-top: 3px solid var(--spice-grid-lines);
 }
 
@@ -227,4 +225,117 @@ main-nowPlayingBar-nowPlayingBar {
 
 .GenericModal {
   border: 3px solid var(--spice-grid-lines);
+}
+
+.main-rootlist-rootlistDividerContainer hr {
+  background-color: transparent;
+}
+
+/* Tweaks & Fixes */
+.main-trackList-trackListRow:focus-within,
+.main-trackList-trackListRow:hover {
+  background-color: var(--spice-selected-row);
+}
+
+.main-trackList-trackListRow:hover .main-trackList-rowMarker,
+.main-trackList-trackListRow:hover .main-trackList-rowTitle,
+.main-trackList-trackListRow:focus-within .main-trackList-rowMarker,
+.main-trackList-trackListRow:focus-within .main-trackList-rowTitle {
+  color: var(--spice-text) !important;
+}
+
+.main-contextMenu-menu {
+  background-color: var(--spice-main);
+}
+
+.main-contextMenu-menu .main-contextMenu-menuItem:focus-within,
+.main-contextMenu-menu .main-contextMenu-menuItem:hover {
+  background-color: var(--spice-selected-row);
+}
+
+.main-gridContainer-gridContainer .view-homeShortcutsGrid-shortcut {
+  background-color: rgba(var(--spice-card), 0.1);
+}
+
+.main-gridContainer-gridContainer .view-homeShortcutsGrid-shortcut:focus-within,
+.main-gridContainer-gridContainer .view-homeShortcutsGrid-shortcut:hover {
+  background-color: var(--spice-card);
+}
+
+.playlist-playlist-searchBoxContainer > *,
+.collection-searchBar-searchBar > *,
+.x-filterBox-filterInputContainer > *,
+.x-filterBox-overlay > * {
+  color: var(--spice-text);
+}
+
+/* fixes download button on podcast episode for light theme */
+button {
+  color: var(--spice-subtext) !important;
+}
+
+.main-playButton-PlayButton,
+.main-playPauseButton-button {
+  background-color: var(--spice-button) !important;
+  color: white !important;
+}
+
+input::placeholder {
+  color: var(--spice-text) !important;
+}
+
+/* Fixes podcast dates for light theme */
+.main-type-mesto {
+  color: var(--spice-subtext);
+}
+
+/* Remove podcasts overlay */
+[data-testid="header"],
+[data-testid="action-bar-container"]
+  [data-testid="action-background-container"],
+[data-testid="episode"] [data-testid="container"],
+[data-testid="episode"]
+  [data-testid="action-bar-container"]
+  [data-testid="action-background-container"] {
+  background-color: unset !important;
+  background-image: unset !important;
+}
+
+/* Match System Appearence */
+/* Remove this to set the color scheme manually */
+@media (prefers-color-scheme: light) {
+  :root {
+    --spice-misc: #aaaaaa;
+    --spice-card: #dddddd;
+    --spice-subtext: #5d5d5d;
+    --spice-main: #f8f8f8;
+    --spice-sidebar: #f8f8f8;
+    --spice-selected-row: #dddddd;
+    --spice-button-disabled: #dddddd;
+    --spice-grid-lines: #000000;
+    --spice-notification: #dddddd;
+    --spice-shadow: #aaaaaa;
+    --spice-notification-error: #e22134;
+    --spice-player: #f8f8f8;
+    --spice-button-active: #5d5d5d;
+    --spice-button: #00bf76;
+    --spice-tab-active: #00bf76;
+    --spice-text: #000000;
+    --spice-rgb-misc: 170, 170, 170;
+    --spice-rgb-card: 221, 221, 221;
+    --spice-rgb-subtext: 93, 93, 93;
+    --spice-rgb-main: 248, 248, 248;
+    --spice-rgb-sidebar: 248, 248, 248;
+    --spice-rgb-selected-row: 221, 221, 221;
+    --spice-rgb-button-disabled: 221, 221, 221;
+    --spice-rgb-grid-lines: 0, 0, 0;
+    --spice-rgb-notification: 221, 221, 221;
+    --spice-rgb-shadow: 170, 170, 170;
+    --spice-rgb-notification-error: 226, 33, 52;
+    --spice-rgb-player: 248, 248, 248;
+    --spice-rgb-button-active: 93, 93, 93;
+    --spice-rgb-button: 0, 191, 118;
+    --spice-rgb-tab-active: 0, 191, 118;
+    --spice-rgb-text: 0, 0, 0;
+  }
 }
