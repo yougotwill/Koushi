@@ -186,41 +186,45 @@ div.GlueDropTarget.personal-library > *.active {
 }
 
 /* Koushi Grid Theme */
-
-/* #main {
-    border: 3px solid var(--spice-grid-lines);
+#main {
+  border: 3px solid var(--spice-grid-lines);
 }
 
 .main-buddyFeed-buddyFeedRoot {
-    border-left: 3px solid var(--spice-grid-lines); 
+  border-left: 3px solid var(--spice-grid-lines);
 }
 
 .Root__nav-bar {
-    border-right: 3px solid var(--spice-grid-lines);
+  border-right: 3px solid var(--spice-grid-lines);
 }
 
-.Root__now-playing-bar {
-    border-top: 3px solid var(--spice-grid-lines);
+/* .Root__now-playing-bar {
+  border-top: 3px solid var(--spice-grid-lines);
+} */
+
+main-nowPlayingBar-nowPlayingBar {
+  border-top: 3px solid var(--spice-grid-lines);
 }
 
 .main-coverSlotExpanded-container {
-    border-top: 3px solid var(--spice-grid-lines); 
+  border-top: 3px solid var(--spice-grid-lines);
 }
 
-.main-nowPlayingWidget-nowPlaying.main-nowPlayingWidget-coverExpanded >.main-coverSlotCollapsed-container {
-    visibility: hidden;
+.main-nowPlayingWidget-nowPlaying.main-nowPlayingWidget-coverExpanded
+  > .main-coverSlotCollapsed-container {
+  visibility: hidden;
 }
 
 .connect-device-list-container.connect-device-list-container--is-visible {
-    border: 3px solid var(--spice-grid-lines);
-    box-shadow: unset;
+  border: 3px solid var(--spice-grid-lines);
+  box-shadow: unset;
 }
 
 .main-contextMenu-menu {
-    border: 3px solid var(--spice-grid-lines);
-    box-shadow: unset;
+  border: 3px solid var(--spice-grid-lines);
+  box-shadow: unset;
 }
 
 .GenericModal {
-    border: 3px solid var(--spice-grid-lines);
-} */
+  border: 3px solid var(--spice-grid-lines);
+}
