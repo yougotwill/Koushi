@@ -47,6 +47,7 @@ input {
 .main-topBar-background {
   background-color: unset !important;
 }
+
 .main-topBar-overlay {
   background-color: var(--spice-main);
 }
@@ -72,8 +73,9 @@ input {
 }
 
 .main-entityHeader-metaDataText,
-.main-duration-container {
-  color: var(--spice-subtext);
+.main-duration-container,
+.main-entityHeader-metaData .main-entityHeader-divider > * {
+  color: var(--spice-text);
 }
 
 span.artist-artistVerifiedBadge-badge svg:nth-child(1) {
@@ -107,6 +109,18 @@ span.artist-artistVerifiedBadge-badge svg:nth-child(1) {
 .artist-artistOverview-overview .main-entityHeader-withBackgroundImage h1 {
   font-size: 175px !important;
   line-height: 175px !important;
+}
+
+/* Full window description text */
+.main-entityHeader-headerText
+  .main-entityHeader-subtitle.main-entityHeader-gray {
+  color: var(--spice-subtext);
+}
+
+/* Removed background gradient from above homepage */
+.os-content div:nth-child(2) main div {
+  background-color: transparent !important;
+  background-image: var(--spice-main);
 }
 
 /** Hightlight selected playlist */
@@ -164,6 +178,7 @@ div.GlueDropTarget.personal-library > *.active {
 #spicetify-playlist-list {
   padding-top: 8px;
 }
+
 .main-collectionLinkButton-collectionLinkButton .main-collectionLinkButton-icon,
 .main-collectionLinkButton-collectionLinkButton
   .main-collectionLinkButton-collectionLinkText {
@@ -172,6 +187,14 @@ div.GlueDropTarget.personal-library > *.active {
 
 .link-subtle {
   color: var(--spice-text);
+}
+
+.main-navBar-navBar div:nth-child(2) div:nth-child(2) {
+  background: linear-gradient(
+    180deg,
+    rgba(var(--spice-main), 0.7),
+    transparent
+  );
 }
 
 /** Player bar */
