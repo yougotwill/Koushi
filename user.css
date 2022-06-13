@@ -118,7 +118,8 @@ span.artist-artistVerifiedBadge-badge svg:nth-child(1) {
 }
 
 /* Removed background gradient from above homepage */
-.os-content div:nth-child(2) main div {
+/* TODO should be submitted to CSS MAP? */
+.os-content div:nth-child(2) main .n87ifzfQlmGX8vkeYGDL {
   background-color: transparent !important;
   background-image: var(--spice-main);
 }
@@ -255,16 +256,10 @@ div.GlueDropTarget.personal-library > *.active {
 }
 
 /* Tweaks & Fixes */
-.main-trackList-trackListRow:focus-within,
-.main-trackList-trackListRow:hover {
+.main-trackList-trackListRow:hover,
+.main-trackList-trackListRow.main-trackList-selected,
+.main-trackList-trackListRow.main-trackList-selected:hover {
   background-color: var(--spice-selected-row);
-}
-
-.main-trackList-trackListRow:hover .main-trackList-rowMarker,
-.main-trackList-trackListRow:hover .main-trackList-rowTitle,
-.main-trackList-trackListRow:focus-within .main-trackList-rowMarker,
-.main-trackList-trackListRow:focus-within .main-trackList-rowTitle {
-  color: var(--spice-text) !important;
 }
 
 .main-contextMenu-menu {
