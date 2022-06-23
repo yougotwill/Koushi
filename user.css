@@ -111,9 +111,8 @@ span.artist-artistVerifiedBadge-badge svg:nth-child(1) {
   line-height: 175px !important;
 }
 
-/* Full window description text */
-.main-entityHeader-headerText
-  .main-entityHeader-subtitle.main-entityHeader-gray {
+/* Full window artist text */
+.main-entityHeader-headerText .main-entityHeader-subtitle.main-entityHeader-gray {
   color: var(--spice-subtext);
 }
 
@@ -191,11 +190,7 @@ div.GlueDropTarget.personal-library > *.active {
 }
 
 .main-navBar-navBar div:nth-child(2) div:nth-child(2) {
-  background: linear-gradient(
-    180deg,
-    rgba(var(--spice-main), 0.7),
-    transparent
-  );
+  background: linear-gradient(180deg, rgba(var(--spice-main), .7), transparent)
 }
 
 /** Player bar */
@@ -216,25 +211,33 @@ div.GlueDropTarget.personal-library > *.active {
   border: 3px solid var(--spice-grid-lines);
 }
 
-.main-buddyFeed-buddyFeedRoot {
+.Root__top-container > aside {
   border-left: 3px solid var(--spice-grid-lines);
+}
+
+.Root__top-container > aside a {
+  color: var(--spice-text) !important;
+}
+
+.Root__top-container > aside p {
+  color: var(--spice-subtext) !important;
 }
 
 .Root__nav-bar {
   border-right: 3px solid var(--spice-grid-lines);
 }
 
-.main-nowPlayingBar-container {
+.Root__now-playing-bar footer {
   border-top: 3px solid var(--spice-grid-lines);
 }
 
-.main-coverSlotExpanded-container {
-  border-top: 3px solid var(--spice-grid-lines);
+.Root__now-playing-bar .main-nowPlayingBar-left {
+  overflow: hidden;
+  padding-left: 1px;
 }
 
-.main-nowPlayingWidget-nowPlaying.main-nowPlayingWidget-coverExpanded
-  > .main-coverSlotCollapsed-container {
-  visibility: hidden;
+.main-image-image.cover-art-image {
+  border-top: 3px solid var(--spice-grid-lines);
 }
 
 .connect-device-list-container.connect-device-list-container--is-visible {
@@ -257,8 +260,7 @@ div.GlueDropTarget.personal-library > *.active {
 
 /* Tweaks & Fixes */
 .main-trackList-trackListRow:hover,
-.main-trackList-trackListRow.main-trackList-selected,
-.main-trackList-trackListRow.main-trackList-selected:hover {
+.main-trackList-trackListRow.main-trackList-selected, .main-trackList-trackListRow.main-trackList-selected:hover  {
   background-color: var(--spice-selected-row);
 }
 
@@ -290,6 +292,11 @@ div.GlueDropTarget.personal-library > *.active {
 /* fixes download button on podcast episode for light theme */
 button {
   color: var(--spice-subtext) !important;
+}
+
+/* Fixes Collaborate button on playlist for light theme */
+.main-actionBar-ActionBarRow > svg {
+  fill: var(--spice-subtext);
 }
 
 .main-playButton-PlayButton,
